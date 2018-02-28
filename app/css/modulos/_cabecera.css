@@ -1,0 +1,6 @@
+.cabecera{
+
+	&__titulo {
+		display: none;
+	}
+}
