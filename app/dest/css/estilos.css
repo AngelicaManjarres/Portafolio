@@ -1,6 +1,33 @@
-body {
+body { 
 	font-family: 'Open Sans', Verdana;
+	background-color: #CEE3F6;
+}
+.cabecera{
+	border-bottom: 6px solid #2f5572;
+
+	background-color: #FFF;
 }
 .cabecera__titulo {
 		display: none;
 	}
+.cabecera__logo{
+		width: 20rem;
+		padding: .3rem 1rem;
+	}
+.cabecera nav{
+		float: right;
+		margin-right: 2rem;
+		margin-top: .8rem;
+	}
+.cabecera nav li{
+			float:left;
+			font-weight: 300;
+			text-decoration: none;
+			list-style: none;
+			color: #FFF;
+			margin: 0 1.3rem;
+			background-color: #2f5572;
+			padding: .5rem 1.5rem;
+			border-radius: 5px;
+			border: 1px solid #2f5572;
+		}
