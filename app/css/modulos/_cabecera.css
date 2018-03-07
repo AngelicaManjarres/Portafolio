@@ -1,32 +1,165 @@
 .cabecera{
-	border-bottom: 6px solid $azul;
 
-	background-color: #FFF;
+	@mixin clearfix;
 
-	&__titulo {
-		display: none;
-	}
+	width: 100%; 
+	background-color: #2f5572;
+	padding: .5rem;
 
-	&__logo{
-		width: 20rem;
-		padding: .3rem 1rem;
-	}
-	nav{
-		float: right;
-		margin-right: 2rem;
-		margin-top: .8rem;
 
-		li{
-			float:left;
-			font-weight: 300;
-			text-decoration: none;
-			list-style: none;
-			color: #FFF;
-			margin: 0 1.3rem;
-			background-color: $azul;
-			padding: .5rem 1.5rem;
-			border-radius: 5px;
-			border: 1px solid $azul;
+	&--sticky{
+		position: fixed;
+		background-color: rgba(23, 51, 72, .8);
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		top: 0;
+
+		h1 {
+			padding: 0;
+			margin: 0;
+			transform: scale(.9);
+			transition: all .3s ease-out;
 		}
+		@mixin small{
+			padding-bottom: .9rem;
+		}
+	}
+
+	&__menu{
+		width: 20px;
+		height: 19px;
+		position: absolute;
+		z-index: 5;
+		top: 10px;
+		right: 10px;
+
+		&::before{
+			content:"";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color:#FFF;
+			transform-origin: 0 0;
+		}
+
+		&__mid{
+			content:"";
+			position: absolute;
+			top:8px;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color:#FFF;
+			transform-origin: 0 50%;
+		}
+
+		&::after{
+			content:"";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color:#FFF;
+			transform-origin: 0 100%;
+		}
+
+		@mixin medium {
+			display: none;
+		}
+	}
+
+	&__menu--icono-x{
+		&::before{
+			transition: all .3s ease-out;
+			transform: rotate(45deg) scaleX(1.25);
+		}
+
+		.cabecera__menu__mid{
+			transition: all .3s ease-out;
+			opacity: 0;
+			transform: scaleX(0);
+		}
+		&::after{
+			transition: all .3s ease-out;
+			transform: rotate(-45deg) scaleX(1.25);
+		}
+	}
+
+	&__izquierda{
+		color:#FFF;
+		width: 100%;
+
+		@mixin large{
+			text-align: center;
+			display: inline-block;
+			width: 40%;
+		}
+	}
+
+	&__titulo{
+		font-size: 1.5rem;
+		font-weight: 300;
+		padding: 1rem 0;
+		text-align: center;
+
+
+		@mixin large{
+			padding: 0;
+			font-size: 2rem;
+		}
+	}
+
+	&__subtitulo {
+		max-width: 250px;
+		font-weight: 300;
+		font-size: .9rem;
+		text-align: center;
+		margin-top: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		display: none;
+
+		@mixin medium{
+			margin-top: 10px;
+			font-size: 1rem;
+			display: block;
+		}
+		&--no-visible{
+			display: none;
+		}
+	}
+
+	&__contenido-menu{
+		display:none;
+
+		@mixin medium{
+			display: block;
+			float: right;
+			margin: 0;
+		}
+		&--visible{
+			display: block;
+			padding-top: 1rem;
+			padding-left: 1rem;
+		}
+		li{
+			padding-top: .5rem;
+			padding-bottom: .5rem;
+		}
+	}
+
+	li{
+		float: left;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		list-style: none;
+		text-decoration: none;
+		color: #FFF;
+	}
+	&__menu:hover{
+		cursor: pointer;
 	}
 }

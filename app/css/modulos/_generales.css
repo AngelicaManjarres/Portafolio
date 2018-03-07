@@ -1,4 +1,17 @@
 body { 
-	font-family: 'Open Sans', Verdana;
-	background-color: #CEE3F6;
+	font-family: 'Robot', Verdana;
+	background-color: #eee;
+	color: #0B0B61;
 }
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+

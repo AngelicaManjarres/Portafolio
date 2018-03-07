@@ -17,9 +17,17 @@ gulp.task('watch', function(){
 	watch('./app/css/**/*.css', function(){
 		gulp.start('compilarEstilos');
 	})
+
+	watch('./app/javascript/**/*.js', function(){
+		gulp.start('compilarScripts');
+	})
 })
 
 gulp.task('compilarEstilos', ['estilos'], function(){
 	return gulp.src('./app/dest/css/estilos.css')
 	.pipe(browserSync.stream());
+})
+
+gulp.task('compilarScripts', ['scripts'], function(){
+	browserSync.reload();
 })

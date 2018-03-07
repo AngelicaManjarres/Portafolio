@@ -1,3 +1,11 @@
-@import './modulos/_variables';
 @import './modulos/_generales';
+@import './modulos/_variables';
+@import './modulos/_mixins';
+@import './modulos/_wrapper';
 @import './modulos/_cabecera';
+@import './modulos/_columnas';
+@import './modulos/_sobre-mi';
+@import './modulos/_habilidades';
+@import './modulos/_experiencia';
+@import './modulos/_contacto';
+@import './modulos/_footer';

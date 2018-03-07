@@ -1,0 +1,36 @@
+.columna::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+	@media (min-width: 800px) {
+	.columna__columna-5{
+			width: 41.7%;
+			float: left;
+			padding-right: 60px
+	}
+	}
+	@media (min-width: 800px) {
+	.columna__columna-7{
+			width: 58.3%;
+			float: right
+	}
+	}
+	.columna__columna-6 {
+
+		width: 100%;
+	}
+	@media (min-width: 980px){
+	.columna__columna-6 {
+			max-width: 50%;
+			padding-right: 2rem;
+			padding-left: 2rem
+	}
+
+			.columna__columna-6--izquierda {
+				float: left;
+			}
+			.columna__columna-6--derecha{
+				float: right;
+			}
+	}

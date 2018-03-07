@@ -1,0 +1,52 @@
+.habilidades{
+	@mixin clearfix;
+
+	padding: 2rem 1rem;
+	border-bottom: 2px solid #ccc;
+
+	&__titulo{
+		font-size: 1.8rem;
+		font-weight: 300;
+		text-align: center;
+		margin-bottom: 2rem;
+		color: $naranja;
+
+		@mixin large{
+			font-size: 2.8rem;
+		}
+	}
+
+	ul{
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@mixin large{
+			max-width: 400px;
+		}
+	}
+
+	li{
+		padding: .2rem;
+		font-size: .9rem;
+
+		@mixin small{
+			font-size:1rem;
+		}
+	}
+
+	&__izquierda{
+		@mixin large{
+			li{
+		 	padding-top: 1.2rem;
+			}
+		}
+	}
+	&__derecha{
+		@mixin large{
+			li{
+				padding-top: .7rem
+			}
+		}
+	}
+}

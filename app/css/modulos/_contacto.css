@@ -1,0 +1,39 @@
+.contacto{
+
+	@mixin clearfix;
+
+	padding: 2rem 0;
+
+	&__contenido{
+		float:right;
+	}
+
+
+	 &__titulo{
+	 	font-size: 1.4rem;
+	 	font-weight: 300;
+	 	color: $naranja;
+	 	text-align: right;
+
+	 	@mixin small{
+	 		font-size: 1.7rem;
+
+	 	}
+	 }
+
+	 &__info {
+	 	list-style: none;
+	 	text-align: right;
+	 	font-size: .9rem;
+
+	 	@mixin small{
+	 		font-size: 1rem;
+	 	}
+	 	li{
+	 		line-height:1.3rem;
+	 		@mixin small{
+	 			line-height: 2rem;
+	 		}
+	 	}
+	}
+}

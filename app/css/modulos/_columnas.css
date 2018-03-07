@@ -1,0 +1,38 @@
+.columna {
+	@mixin clearfix;
+
+
+	&__columna-5{
+		@mixin medium{
+			width: 41.7%;
+			float: left;
+			padding-right: 60px;
+		}
+	}
+		
+	&__columna-7{
+
+		@mixin medium {
+			width: 58.3%;
+			float: right;
+		}
+	}
+
+	&__columna-6 {
+
+		width: 100%;
+
+		@mixin large {
+			max-width: 50%;
+			padding-right: 2rem;
+			padding-left: 2rem;
+
+			&--izquierda {
+				float: left;
+			}
+			&--derecha{
+				float: right;
+			}
+		}
+	}
+}
